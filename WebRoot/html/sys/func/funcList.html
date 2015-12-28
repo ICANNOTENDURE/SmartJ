@@ -1,0 +1,251 @@
+
+<!-- NEW WIDGET START -->
+<article class="col-sm-12 col-md-12 col-lg-12">
+
+	<!-- Widget ID (each widget will need unique ID)-->
+	<div class="jarviswidget " id="wid-id-1" data-widget-editbutton="false">
+		<header>
+			<span class="widget-icon"> <i class="fa fa-lg fa-calendar"></i>
+			</span>
+			<h2>权限列表</h2>
+
+		</header>
+
+		<!-- widget div-->
+		<div>
+
+			<!-- widget edit box -->
+			<div class="jarviswidget-editbox">
+				<!-- This area used as dropdown edit box -->
+
+			</div>
+			<!-- end widget edit box -->
+
+			<!-- widget content -->
+			<div class="widget-body">
+
+				<div class="widget-body-toolbar bg-color-white">
+
+					<form class="form-inline" role="form">
+
+						<div class="row">
+
+							<div class="col-sm-12 col-md-10">
+
+								<div class="form-group">
+									<label class="sr-only">Task title</label> <input type="email"
+										class="form-control input-sm" placeholder="My Task">
+								</div>
+								<div class="form-group">
+									<label class="sr-only">Pick Week</label> <select
+										class="form-control input-sm">
+										<option>Week 1</option>
+										<option>Week 2</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label class="sr-only">Days</label> <select
+										class="form-control input-sm">
+										<option>Monday</option>
+										<option>Tuesday</option>
+										<option>Wednesday</option>
+										<option>Thursday</option>
+										<option>Friday</option>
+										<option>Saturday</option>
+										<option>Sunday</option>
+									</select>
+								</div>
+
+							</div>
+
+							<div class="col-sm-12 col-md-2 text-align-right">
+
+								<button type="button" class="btn btn-warning btn-xs" id="add">
+									<i class="fa fa-plus"></i> 增加
+								</button>
+
+							</div>
+
+						</div>
+
+					</form>
+
+				</div>
+
+				<div class="tree">
+					<ul>
+						<li><span><i class="fa fa-lg fa-calendar"></i> 2013,
+								Week 2</span>
+							<ul>
+								<li><span class="label label-success"><i
+										class="fa fa-lg fa-plus-circle"></i> Monday, January 7: 8.00
+										hours</span>
+									<ul>
+										<li><span><i class="fa fa-clock-o"></i> 8.00</span>
+											&ndash; <a href="javascript:void(0);">Changed CSS to
+												accomodate...</a></li>
+									</ul></li>
+								<li><span class="label label-success"><i
+										class="fa fa-lg fa-minus-circle"></i> Tuesday, January 8: 8.00
+										hours</span>
+									<ul>
+										<li><span><i class="fa fa-clock-o"></i> 6.00</span>
+											&ndash; <a href="javascript:void(0);">Altered code...</a></li>
+										<li><span><i class="fa fa-clock-o"></i> 2.00</span>
+											&ndash; <a href="javascript:void(0);">Simplified our
+												approach to...</a></li>
+									</ul></li>
+								<li><span class="label label-warning"><i
+										class="fa fa-lg fa-minus-circle"></i> Wednesday, January 9:
+										6.00 hours</span>
+									<ul>
+										<li><span><i class="fa fa-clock-o"></i> 3.00</span>
+											&ndash; <a href="javascript:void(0);">Fixed bug caused
+												by...</a></li>
+										<li><span><i class="fa fa-clock-o"></i> 3.00</span>
+											&ndash; <a href="javascript:void(0);">Comitting latest
+												code to Git...</a></li>
+									</ul></li>
+								<li><span class="label label-danger"><i
+										class="fa fa-lg fa-minus-circle"></i> Wednesday, January 9:
+										4.00 hours</span>
+									<ul>
+										<li><span><i class="fa fa-clock-o"></i> 2.00</span>
+											&ndash; <a href="javascript:void(0);">Create component
+												that...</a></li>
+									</ul></li>
+							</ul></li>
+						<li><span><i class="fa fa-lg fa-calendar"></i> 2013,
+								Week 3</span>
+							<ul>
+								<li><span class="label label-success"><i
+										class="fa fa-lg fa-minus-circle"></i> Monday, January 14: 8.00
+										hours</span>
+									<ul>
+										<li><span><i class="fa fa-clock-o"></i> 7.75</span>
+											&ndash; <a href="javascript:void(0);">Writing
+												documentation...</a></li>
+										<li><span><i class="fa fa-clock-o"></i> 0.25</span>
+											&ndash; <a href="javascript:void(0);">Reverting code back
+												to...</a></li>
+									</ul></li>
+							</ul></li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- end widget content -->
+
+		</div>
+		<!-- end widget div -->
+
+	</div>
+	<!-- end widget -->
+
+</article>
+<!-- WIDGET END -->
+
+
+
+<!-- Dynamic Modal -->
+<div class="modal fade" id="dataModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="widget-body">
+			<form action="sys/user/save" method="post" id="data-form"
+				class="smart-form" >
+				<header>
+					<span class="widget-icon"> <i class="fa fa-edit"></i>
+					</span> 权限信息
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+				</header>
+
+				<fieldset>
+					<div class="row">
+						<section class="col col-6">
+							<label class="label">序号</label> <label class="input"> <i
+								class="icon-append fa fa-user"></i> <input type="text"
+								name="user.user_name">
+							</label>
+						</section>
+						<section class="col col-6">
+							<label class="label">名称</label> <label class="input"> <i
+								class="icon-append fa fa-envelope-o"></i> <input type="email"
+								name="user.user_email">
+							</label>
+						</section>
+					</div>
+					<div class="row">
+						<section class="col col-6">
+							<label class="label">图标</label> <label class="input"> <i
+								class="icon-append fa fa-user"></i> <input type="text"
+								name="user.user_name">
+							</label>
+						</section>
+						<section class="col col-6">
+							<label class="label">父菜单</label> <label class="input"> <i
+								class="icon-append fa fa-envelope-o"></i> <input type="email"
+								name="user.user_email">
+							</label>
+						</section>
+					</div>
+					<section>
+						<label class="label">状态</label> <label class="input"> <i
+							class="icon-append fa fa-tag"></i> <input type="text"
+							name="subject" id="subject">
+						</label>
+					</section>
+					<section>
+						<label class="label">url</label> <label class="input"> <i
+							class="icon-append fa fa-tag"></i> <input type="text"
+							name="subject" id="subject">
+						</label>
+					</section>
+				</fieldset>
+
+				<footer>
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="submit" class="btn btn-primary" id="submint">保存</button>
+				</footer>
+
+				<div class="message">
+					<i class="fa fa-thumbs-up"></i>
+					<p>保存成功!</p>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+<!-- /.modal -->
+
+<script type="text/javascript">
+	pageSetUp();
+
+	var pagefunction = function() {
+
+		loadScript("js/plugin/bootstraptree/bootstrap-tree.min.js");
+
+	};
+	var pagedestroy = function() {
+
+		/*
+		Example below:
+
+		$("#calednar").fullCalendar( 'destroy' );
+		if (debugState){
+			root.console.log("✔ Calendar destroyed");
+		} 
+
+		For common instances, such as Jarviswidgets, Google maps, and Datatables, are automatically destroyed through the app.js loadURL mechanic
+
+		 */
+
+	}
+	pagefunction();
+	$("#add").on('click', function() {
+		$("#dataModal").modal();
+	});
+</script>
